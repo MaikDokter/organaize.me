@@ -22,10 +22,28 @@
             color: #2563eb;
             font-size: 2rem;
             font-weight: 300;
+            text-align: center;
+        }
+        .separator {
+            display: inline;
+        }
+        .separator::before {
+            content: " | ";
+        }
+        @media (max-width: 480px) {
+            .text {
+                font-size: 1.5rem;
+            }
+            .separator {
+                display: block;
+            }
+            .separator::before {
+                content: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="text">organAIze.me | made with ❤️</div>
+    <div class="text">organAIze.me<span class="separator">made with ❤️</span></div>
 </body>
 </html>
